@@ -9,11 +9,12 @@ This is Arduino code for training the robot to walk. Some things about it.
 _Pin Connections_
 The ultrasonic sensor connects to Junction 2. If you want to use another junction, then you have to change the variable "sigR" in the code; sigR is the digital pin that the sensor connects to. You can reference the first page of the **Makeblock mBot** pdf in the main branch, in order to determine which pin to set sigR to.
 
-_Actual Training_
-Make sure that the ultrasonic sensors are facing two flat surfaces. It would be preferable if the robot were trained in a thin box, so that it cannot veer to one side and escape training. It is also helpful to have the robot be trained on a hard, flat, stable surface, such as a drawer as opposed to a movable box.
+_Uploading Training Code_
+You must upload this code to both robots. Change the boolean variable "compass" in the code, so that one robot has compass = true and the other compass = false. This determines the direction of the robot's walk. Once you have uploaded code to one robot, you must switch it off in less than 20 seconds after the "Done Uploading" message appears. 
 
-_Uploading_
-You must upload this code to both robots. Change the boolean variable "compass" in the code, so that one robot has compass = true and the other compass = false. This determines the direction of the robot's walk.
+_Actual Training_
+Make sure that the ultrasonic sensors are facing two flat surfaces. It would be preferable if the robot were trained in a thin box, so that it cannot veer to one side and escape training. It is also helpful to have the robot be trained on a hard, flat, stable surface, such as a drawer as opposed to a movable box. In order to begin training, you must switch on both switches of the robots simultaneously. 
+
 
 _EEPROM_
 EEPROM is a special type of memory which stays even when you switch the mBot off. This means that if you write a float to EEPROM and then the robot powers off, you can power it back on and read the EEPROM value. Two things about EEPROM:
